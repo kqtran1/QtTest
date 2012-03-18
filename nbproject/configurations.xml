@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CanvasWidget.h</itemPath>
+      <itemPath>ChangeTextEvent.h</itemPath>
+      <itemPath>Event.h</itemPath>
+      <itemPath>EventBus.h</itemPath>
+      <itemPath>EventHandler.h</itemPath>
+      <itemPath>MyApplication.h</itemPath>
+      <itemPath>MyApplicationPresenter.h</itemPath>
+      <itemPath>MyApplicationView.h</itemPath>
+      <itemPath>MyCanvasPresenter.h</itemPath>
+      <itemPath>MyCanvasView.h</itemPath>
+      <itemPath>Presenter.h</itemPath>
+      <itemPath>View.h</itemPath>
+      <itemPath>utils.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CanvasWidget.cpp</itemPath>
+      <itemPath>ChangeTextEvent.cpp</itemPath>
+      <itemPath>Event.cpp</itemPath>
+      <itemPath>EventBus.cpp</itemPath>
+      <itemPath>EventHandler.cpp</itemPath>
+      <itemPath>MyApplication.cpp</itemPath>
+      <itemPath>MyApplicationPresenter.cpp</itemPath>
+      <itemPath>MyApplicationView.cpp</itemPath>
+      <itemPath>MyCanvasPresenter.cpp</itemPath>
+      <itemPath>MyCanvasView.cpp</itemPath>
+      <itemPath>View.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="4">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <qt>
+        <modules>core gui</modules>
+      </qt>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>/book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include</pElem>
+            <pElem>.</pElem>
+            <pElem>/book/dev/boost_1_47_0</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="4">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <qt>
+        <buildMode>1</buildMode>
+        <modules>core gui</modules>
+      </qt>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
