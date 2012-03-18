@@ -1,7 +1,7 @@
 #include "MyApplication.h"
 #include "MyApplicationView.h"
 #include "MyApplicationPresenter.h"
-#include "EventBus.h"
+#include "mvp/EventBus.h"
 #include "MyCanvasView.h"
 #include "MyCanvasPresenter.h"
 #include "utils.h"

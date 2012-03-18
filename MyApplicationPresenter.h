@@ -1,9 +1,9 @@
 #ifndef MYAPPLICATIONPRESENTER_H
 #define	MYAPPLICATIONPRESENTER_H
 
-#include "Presenter.h"
+#include "mvp/Presenter.h"
 #include "MyApplicationView.h"
-#include "EventHandler.h"
+#include "mvp/EventHandler.h"
 #include "ChangeTextEvent.h"
 #include "utils.h"
 

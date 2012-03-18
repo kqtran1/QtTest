@@ -6,15 +6,15 @@
                    projectFiles="true">
       <itemPath>CanvasWidget.h</itemPath>
       <itemPath>ChangeTextEvent.h</itemPath>
-      <itemPath>Event.h</itemPath>
-      <itemPath>EventBus.h</itemPath>
-      <itemPath>EventHandler.h</itemPath>
+      <itemPath>mvp/Event.h</itemPath>
+      <itemPath>mvp/EventBus.h</itemPath>
+      <itemPath>mvp/EventHandler.h</itemPath>
       <itemPath>MyApplication.h</itemPath>
       <itemPath>MyApplicationPresenter.h</itemPath>
       <itemPath>MyApplicationView.h</itemPath>
       <itemPath>MyCanvasPresenter.h</itemPath>
       <itemPath>MyCanvasView.h</itemPath>
-      <itemPath>Presenter.h</itemPath>
+      <itemPath>mvp/Presenter.h</itemPath>
       <itemPath>View.h</itemPath>
       <itemPath>utils.h</itemPath>
     </logicalFolder>
@@ -28,15 +28,16 @@
       <itemPath>CanvasWidget.cpp</itemPath>
       <itemPath>ChangeTextEvent.cpp</itemPath>
       <itemPath>Event.cpp</itemPath>
-      <itemPath>EventBus.cpp</itemPath>
-      <itemPath>EventHandler.cpp</itemPath>
+      <itemPath>mvp/EventBus.cpp</itemPath>
+      <itemPath>mvp/EventHandler.cpp</itemPath>
       <itemPath>MyApplication.cpp</itemPath>
       <itemPath>MyApplicationPresenter.cpp</itemPath>
       <itemPath>MyApplicationView.cpp</itemPath>
       <itemPath>MyCanvasPresenter.cpp</itemPath>
       <itemPath>MyCanvasView.cpp</itemPath>
-      <itemPath>View.cpp</itemPath>
-      <itemPath>main.cpp</itemPath>
+      <itemPath>tests/SimpleTest.cpp</itemPath>
+      <itemPath>mvp/View.cpp</itemPath>
+      <!--itemPath>main.cpp</itemPath-->
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -64,6 +65,8 @@
         <cTool>
           <incDir>
             <pElem>.</pElem>
+            <pElem>.</pElem>
+            <pElem>.</pElem>
           </incDir>
         </cTool>
         <ccTool>
@@ -71,10 +74,15 @@
             <pElem>/book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include</pElem>
             <pElem>.</pElem>
             <pElem>/book/dev/boost_1_47_0</pElem>
+            <pElem>.</pElem>
+            <pElem>.</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerLibStdlibItem>CppUnit</linkerLibStdlibItem>
+          </linkerLibItems>
         </linkerTool>
       </compileType>
     </conf>
@@ -100,6 +108,35 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+      </compileType>
+    </conf>
+    <conf name="Test" type="4">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <qt>
+        <modules>core gui</modules>
+      </qt>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/book/dev/gtest-1.6.0/include</pElem>
+            <pElem>/book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include</pElem>
+            <pElem>/book/dev/boost_1_47_0</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/book/dev/boost_1_47_0/stage/lib</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/lib/Darwin/x86_64</pElem>
+            <pElem>/book/dev/gtest-1.6.0/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest_main.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
     </conf>
   </confs>

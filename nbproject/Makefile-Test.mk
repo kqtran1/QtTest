@@ -23,7 +23,7 @@ QMAKE=qmake
 
 # Macros
 CND_PLATFORM=GNU-MacOSX
-CND_CONF=Debug
+CND_CONF=Test
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 
@@ -51,7 +51,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lcppunit
+LDLIBSOPTIONS=-L/book/dev/boost_1_47_0/stage/lib -L/book/dev/poco-1.4.3p1/lib/Darwin/x86_64 -L/book/dev/gtest-1.6.0/lib /book/dev/gtest-1.6.0/lib/libgtest.a /book/dev/gtest-1.6.0/lib/libgtest_main.a
 
 nbproject/qt-${CND_CONF}.mk: nbproject/qt-${CND_CONF}.pro FORCE
 	${QMAKE} VPATH=. -spec macx-g++ -o qttmp-${CND_CONF}.mk nbproject/qt-${CND_CONF}.pro
@@ -63,7 +63,7 @@ FORCE:
 .build-conf: ${BUILD_SUBPROJECTS} nbproject/qt-${CND_CONF}.mk
 	"${MAKE}" -f nbproject/qt-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/QtExample
 
-${CND_BUILDDIR}/Debug/%.o: nbproject/qt-${CND_CONF}.mk
+${CND_BUILDDIR}/Test/%.o: nbproject/qt-${CND_CONF}.mk
 	${MAKE} -f nbproject/qt-${CND_CONF}.mk "$@"
 
 # Subprojects

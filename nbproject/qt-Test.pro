@@ -1,7 +1,7 @@
 # This file is generated automatically. Do not edit.
 # Use project properties -> Build -> Qt -> Expert -> Custom Definitions.
 TEMPLATE = app
-DESTDIR = dist/Debug/GNU-MacOSX
+DESTDIR = dist/Test/GNU-MacOSX
 TARGET = QtExample
 VERSION = 1.0.0
 CONFIG -= debug_and_release app_bundle lib_bundle
@@ -12,12 +12,12 @@ HEADERS += mvp/Presenter.h MyApplication.h View.h MyCanvasView.h utils.h MyAppli
 FORMS +=
 RESOURCES +=
 TRANSLATIONS +=
-OBJECTS_DIR = build/Debug/GNU-MacOSX
+OBJECTS_DIR = build/Test/GNU-MacOSX
 MOC_DIR = 
 RCC_DIR = 
 UI_DIR = 
 QMAKE_CC = gcc
 QMAKE_CXX = g++
 DEFINES += 
-INCLUDEPATH += /book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include . /book/dev/boost_1_47_0 . . 
-LIBS += -lcppunit   
+INCLUDEPATH += /book/dev/gtest-1.6.0/include /book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include /book/dev/boost_1_47_0 
+LIBS += /book/dev/gtest-1.6.0/lib/libgtest.a /book/dev/gtest-1.6.0/lib/libgtest_main.a  

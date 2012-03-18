@@ -2,10 +2,10 @@
 #define	MYCANVASPRESENTER_H
 
 #include "MyCanvasView.h"
-#include "Presenter.h"
-#include "EventHandler.h"
+#include "mvp/Presenter.h"
+#include "mvp/EventHandler.h"
 #include "ChangeTextEvent.h"
-#include "Event.h"
+#include "mvp/Event.h"
 #include "utils.h"
 
 class MyCanvasPresenter : public Presenter<MyCanvasView>, public EventHandler {

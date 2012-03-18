@@ -1,7 +1,7 @@
 #ifndef CHANGETEXTEVENT_H
 #define	CHANGETEXTEVENT_H
 
-#include "Event.h"
+#include "mvp/Event.h"
 #include "utils.h"
 
 class ChangeTextEvent : public Event {
