@@ -35,14 +35,14 @@
       <itemPath>MyApplicationView.cpp</itemPath>
       <itemPath>MyCanvasPresenter.cpp</itemPath>
       <itemPath>MyCanvasView.cpp</itemPath>
-      <itemPath>tests/SimpleTest.cpp</itemPath>
       <itemPath>mvp/View.cpp</itemPath>
-      <!--itemPath>main.cpp</itemPath-->
+      <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
+      <itemPath>tests/SimpleTest.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -50,6 +50,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>tests/SimpleTest.cpp</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -65,8 +66,6 @@
         <cTool>
           <incDir>
             <pElem>.</pElem>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
           </incDir>
         </cTool>
         <ccTool>
@@ -74,14 +73,14 @@
             <pElem>/book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include</pElem>
             <pElem>.</pElem>
             <pElem>/book/dev/boost_1_47_0</pElem>
-            <pElem>.</pElem>
-            <pElem>.</pElem>
+            <pElem>/book/dev/gtest-1.6.0/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
           <linkerLibItems>
-            <linkerLibStdlibItem>CppUnit</linkerLibStdlibItem>
+            <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest_main.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -138,6 +137,8 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="main.cpp" ex="true" tool="1" flavor="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

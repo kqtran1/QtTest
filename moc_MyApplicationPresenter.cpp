@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'MyApplicationPresenter.h'
 **
-** Created: Sun Mar 18 17:23:14 2012
+** Created: Sun Mar 18 18:17:24 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.0)
 **
 ** WARNING! All changes made in this file will be lost!
