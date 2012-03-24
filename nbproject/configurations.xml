@@ -4,18 +4,21 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="mvp" projectFiles="true">
+        <itemPath>mvp/Event.h</itemPath>
+        <itemPath>mvp/EventBus.h</itemPath>
+        <itemPath>mvp/EventHandler.h</itemPath>
+        <itemPath>mvp/Presenter.h</itemPath>
+        <itemPath>View.h</itemPath>
+      </logicalFolder>
+      <itemPath>BondPricerService.h</itemPath>
       <itemPath>CanvasWidget.h</itemPath>
       <itemPath>ChangeTextEvent.h</itemPath>
-      <itemPath>mvp/Event.h</itemPath>
-      <itemPath>mvp/EventBus.h</itemPath>
-      <itemPath>mvp/EventHandler.h</itemPath>
       <itemPath>MyApplication.h</itemPath>
       <itemPath>MyApplicationPresenter.h</itemPath>
       <itemPath>MyApplicationView.h</itemPath>
       <itemPath>MyCanvasPresenter.h</itemPath>
       <itemPath>MyCanvasView.h</itemPath>
-      <itemPath>mvp/Presenter.h</itemPath>
-      <itemPath>View.h</itemPath>
       <itemPath>utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -25,17 +28,20 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="mvp" projectFiles="true">
+        <itemPath>Event.cpp</itemPath>
+        <itemPath>mvp/EventBus.cpp</itemPath>
+        <itemPath>mvp/EventHandler.cpp</itemPath>
+        <itemPath>mvp/View.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>BondPricerService.cpp</itemPath>
       <itemPath>CanvasWidget.cpp</itemPath>
       <itemPath>ChangeTextEvent.cpp</itemPath>
-      <itemPath>Event.cpp</itemPath>
-      <itemPath>mvp/EventBus.cpp</itemPath>
-      <itemPath>mvp/EventHandler.cpp</itemPath>
       <itemPath>MyApplication.cpp</itemPath>
       <itemPath>MyApplicationPresenter.cpp</itemPath>
       <itemPath>MyApplicationView.cpp</itemPath>
       <itemPath>MyCanvasPresenter.cpp</itemPath>
       <itemPath>MyCanvasView.cpp</itemPath>
-      <itemPath>mvp/View.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -73,6 +79,7 @@
             <pElem>/book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include</pElem>
             <pElem>.</pElem>
             <pElem>/book/dev/boost_1_47_0</pElem>
+            <pElem>/book/dev/QuantLib-1.2</pElem>
             <pElem>/book/dev/gtest-1.6.0/include</pElem>
           </incDir>
         </ccTool>
@@ -81,6 +88,10 @@
           <linkerLibItems>
             <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest.a</linkerLibFileItem>
             <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest_main.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_chrono.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_thread.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_system.a</linkerLibFileItem>
+            <linkerOptionItem>-L/opt/local/lib/ -lQuantLib</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -123,6 +134,7 @@
             <pElem>/book/dev/gtest-1.6.0/include</pElem>
             <pElem>/book/dev/QtSDK/Desktop/Qt/4.8.0/gcc/include</pElem>
             <pElem>/book/dev/boost_1_47_0</pElem>
+            <pElem>/book/dev/QuantLib-1.2</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -134,6 +146,10 @@
           <linkerLibItems>
             <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest.a</linkerLibFileItem>
             <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest_main.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_chrono.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_thread.a</linkerLibFileItem>
+            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_system.a</linkerLibFileItem>
+            <linkerOptionItem>-L/opt/local/lib/ -lQuantLib</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
