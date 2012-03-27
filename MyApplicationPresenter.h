@@ -3,25 +3,34 @@
 
 #include "mvp/Presenter.h"
 #include "MyApplicationView.h"
-#include "mvp/EventHandler.h"
-#include "ChangeTextEvent.h"
+#include "services/BondPricerService.h"
 #include "utils.h"
 
 #include <QtGui/QLabel>
 
-class MyApplicationPresenter : public Presenter<MyApplicationView>, public EventHandler {
+#include <Poco/NotificationCenter.h>
+
+class BaseNotification: public Poco::Notification 
+{
+};
+
+class MyApplicationPresenter : public Presenter<MyApplicationView> {
     Q_OBJECT
 public:
-    MyApplicationPresenter(MyApplicationView &view, EventBus &eventBus);
+    MyApplicationPresenter(MyApplicationView & view, 
+            Poco::NotificationCenter & notificationCenter,
+            BondPricerService & bondPricerService);
+    
     virtual ~MyApplicationPresenter();
 
     void log(std::string msg) const;
-    
-    virtual void handle(const boost::shared_ptr<Event>);
 
 public slots:
     void logNothing();
 
+private:
+    BondPricerService & bondPricerService;
+    Poco::NotificationCenter & notificationCenter;
 };
 
 #endif

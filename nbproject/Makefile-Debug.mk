@@ -51,7 +51,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=/book/dev/gtest-1.6.0/lib/libgtest.a /book/dev/gtest-1.6.0/lib/libgtest_main.a /book/dev/boost_1_47_0/stage/lib/libboost_chrono.a /book/dev/boost_1_47_0/stage/lib/libboost_thread.a /book/dev/boost_1_47_0/stage/lib/libboost_system.a -L/opt/local/lib/ -lQuantLib
+LDLIBSOPTIONS=/book/dev/gtest-1.6.0/lib/libgtest.a /book/dev/gtest-1.6.0/lib/libgtest_main.a /book/dev/boost_1_47_0/stage/lib/libboost_chrono.a /book/dev/boost_1_47_0/stage/lib/libboost_system.a -L/opt/local/lib/ -lQuantLib /book/dev/poco-1.4.3p1/lib/Darwin/x86_64/libPocoFoundation.dylib
 
 nbproject/qt-${CND_CONF}.mk: nbproject/qt-${CND_CONF}.pro FORCE
 	${QMAKE} VPATH=. -spec macx-g++ -o qttmp-${CND_CONF}.mk nbproject/qt-${CND_CONF}.pro

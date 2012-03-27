@@ -1,19 +1,18 @@
 #include "MyCanvasPresenter.h"
-#include "ChangeTextEvent.h"
+#include "mvp/Event.h"
 
-typedef boost::shared_ptr<ChangeTextEvent> SharedChangedEvent;
+#include <Poco/NObserver.h>
 
-MyCanvasPresenter::MyCanvasPresenter(MyCanvasView &view, EventBus &eventBus):
-Presenter<MyCanvasView>(view, eventBus), EventHandler() {
+MyCanvasPresenter::MyCanvasPresenter(MyCanvasView &view, Poco::NotificationCenter & notificationCenter):
+Presenter<MyCanvasView>(view, notificationCenter) {
     Logger::logConstructor("MyCanvasPresenter");
-    eventBus.registerHandler("toto", this);
+    notificationCenter.addObserver(Poco::NObserver<MyCanvasPresenter, RunBondComputationNotification > (*this, &MyCanvasPresenter::handle));
 }
 
 MyCanvasPresenter::~MyCanvasPresenter() {
     Logger::logDestructor("MyCanvasPresenter");
 }
 
-void MyCanvasPresenter::handle(const boost::shared_ptr<Event> event) {
-    const boost::shared_ptr<ChangeTextEvent> textEvent = boost::static_pointer_cast<ChangeTextEvent>(event);
-    this->myView->setText(textEvent->text());
+void MyCanvasPresenter::handle(const Poco::AutoPtr<RunBondComputationNotification> & notification) {
+    this->myView->setText(notification->text());
 }

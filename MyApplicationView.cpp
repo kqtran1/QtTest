@@ -6,19 +6,23 @@
 
 MyApplicationView::MyApplicationView() : 
         panel(new QDockWidget(QWidget::tr("MyApplicationView"))), 
-        loginInput(new QLineEdit()) {
+        couponRateInput(new QLineEdit()) {
     Logger::logConstructor("MyApplicationView");
     
-    QLabel *loginLabel = new QLabel("Login:");
+    QLabel *couponRateLabel = new QLabel("Coupon Rate:");
+    couponRateInput->setInputMask("0.00000");
+    couponRateInput->setMaxLength(7);
     
-    QLabel *passwordLabel = new QLabel("Password:");
+    QLabel *passwordLabel = new QLabel("Market Quote:");
     QLineEdit *passwordInput = new QLineEdit();
+    passwordInput->setInputMask("000.0000");
+    passwordInput->setMaxLength(8);
     
     // Memory Leak?
     QWidget *widget = new QWidget;
     QGridLayout *layout = new QGridLayout(widget);
-    layout->addWidget(loginLabel, 0, 0, Qt::AlignLeft);
-    layout->addWidget(loginInput, 0, 1, Qt::AlignRight);
+    layout->addWidget(couponRateLabel, 0, 0, Qt::AlignLeft);
+    layout->addWidget(couponRateInput, 0, 1, Qt::AlignRight);
     layout->addWidget(passwordLabel, 1, 0, Qt::AlignLeft);
     layout->addWidget(passwordInput, 1, 1, Qt::AlignRight);
     panel->setWidget(widget);
@@ -28,7 +32,7 @@ MyApplicationView::MyApplicationView() :
 
 MyApplicationView::~MyApplicationView() {
     Logger::logDestructor("MyApplicationView");
-    delete loginInput;
+    delete couponRateInput;
 }
 
 QWidget* MyApplicationView::container() const {
@@ -39,6 +43,6 @@ QDockWidget* MyApplicationView::dockContainer() const {
     return panel;
 }
 
-QLineEdit* MyApplicationView::getLoginInput() const {
-    return loginInput;
+QLineEdit* MyApplicationView::getCouponRateInput() const {
+    return couponRateInput;
 }

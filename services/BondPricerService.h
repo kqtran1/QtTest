@@ -1,6 +1,8 @@
 #ifndef BONDPRICERSERVICE_H
 #define	BONDPRICERSERVICE_H
 
+#include "UnCopyable.h"
+
 #include <ql/quantlib.hpp>
 
 #include <boost/timer.hpp>
@@ -39,7 +41,7 @@ struct BondPricingResult {
     std::string message;
 };
 
-class BondPricerService {
+class BondPricerService : public UnCopyable {
 public:
     BondPricerService();
     virtual ~BondPricerService();

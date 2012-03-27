@@ -6,12 +6,12 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="mvp" projectFiles="true">
         <itemPath>mvp/Event.h</itemPath>
-        <itemPath>mvp/EventBus.h</itemPath>
-        <itemPath>mvp/EventHandler.h</itemPath>
         <itemPath>mvp/Presenter.h</itemPath>
         <itemPath>View.h</itemPath>
       </logicalFolder>
-      <itemPath>BondPricerService.h</itemPath>
+      <logicalFolder name="f2" displayName="services" projectFiles="true">
+        <itemPath>services/BondPricerService.h</itemPath>
+      </logicalFolder>
       <itemPath>CanvasWidget.h</itemPath>
       <itemPath>ChangeTextEvent.h</itemPath>
       <itemPath>MyApplication.h</itemPath>
@@ -29,19 +29,18 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="mvp" projectFiles="true">
-        <itemPath>Event.cpp</itemPath>
-        <itemPath>mvp/EventBus.cpp</itemPath>
-        <itemPath>mvp/EventHandler.cpp</itemPath>
         <itemPath>mvp/View.cpp</itemPath>
       </logicalFolder>
-      <itemPath>BondPricerService.cpp</itemPath>
+      <logicalFolder name="f2" displayName="services" projectFiles="true">
+        <itemPath>services/BondPricerService.cpp</itemPath>
+      </logicalFolder>
       <itemPath>CanvasWidget.cpp</itemPath>
-      <itemPath>ChangeTextEvent.cpp</itemPath>
       <itemPath>MyApplication.cpp</itemPath>
       <itemPath>MyApplicationPresenter.cpp</itemPath>
       <itemPath>MyApplicationView.cpp</itemPath>
       <itemPath>MyCanvasPresenter.cpp</itemPath>
       <itemPath>MyCanvasView.cpp</itemPath>
+      <itemPath>UnCopyable.h</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -56,7 +55,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>tests/SimpleTest.cpp</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -81,6 +79,8 @@
             <pElem>/book/dev/boost_1_47_0</pElem>
             <pElem>/book/dev/QuantLib-1.2</pElem>
             <pElem>/book/dev/gtest-1.6.0/include</pElem>
+            <pElem>/book/dev/threadpool-0.2.5</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/Foundation/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -89,9 +89,9 @@
             <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest.a</linkerLibFileItem>
             <linkerLibFileItem>/book/dev/gtest-1.6.0/lib/libgtest_main.a</linkerLibFileItem>
             <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_chrono.a</linkerLibFileItem>
-            <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_thread.a</linkerLibFileItem>
             <linkerLibFileItem>/book/dev/boost_1_47_0/stage/lib/libboost_system.a</linkerLibFileItem>
             <linkerOptionItem>-L/opt/local/lib/ -lQuantLib</linkerOptionItem>
+            <linkerLibFileItem>/book/dev/poco-1.4.3p1/lib/Darwin/x86_64/libPocoFoundation.dylib</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

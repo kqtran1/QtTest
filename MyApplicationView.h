@@ -18,11 +18,13 @@ public:
     
     virtual QWidget* container() const;
     QDockWidget* dockContainer() const;
-    QLineEdit* getLoginInput() const;
+    QLineEdit* getCouponRateInput() const;
+    
+    
     
 private:
     QDockWidget *panel;
-    QLineEdit *loginInput;
+    QLineEdit *couponRateInput;
 };
 
 #endif

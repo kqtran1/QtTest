@@ -2,30 +2,27 @@
 #define	PRESENTER_H
 
 #include "View.h"
-#include "EventBus.h"
 #include "utils.h"
 
 #include <QtCore/QObject>
 
+#include <Poco/NotificationCenter.h>
+
 template <class T>
-class Presenter: public QObject {
-    
-protected:
-    T *myView;
-    EventBus &eventBus;
-    
+class Presenter: public QObject {    
 public:
-    Presenter(T &view, EventBus &eventBus);
+    Presenter(T &view, Poco::NotificationCenter & notificationCenter);
     virtual ~Presenter();
     
     const T & view() const;
-    
-private:
 
+protected:
+    T *myView;
+    Poco::NotificationCenter & notificationCenter;
 };
 
 template <class T>
-Presenter<T>::Presenter(T &view, EventBus &eventBus) : myView(&view), eventBus(eventBus) {
+Presenter<T>::Presenter(T &view, Poco::NotificationCenter & notificationCenter) : myView(&view), notificationCenter(notificationCenter) {
     Logger::logConstructor("Presenter");
 }
 
