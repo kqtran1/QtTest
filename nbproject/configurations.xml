@@ -12,11 +12,11 @@
       <logicalFolder name="f2" displayName="services" projectFiles="true">
         <itemPath>services/BondPricerService.h</itemPath>
       </logicalFolder>
+      <itemPath>BondView.h</itemPath>
       <itemPath>CanvasWidget.h</itemPath>
       <itemPath>ChangeTextEvent.h</itemPath>
       <itemPath>MyApplication.h</itemPath>
       <itemPath>MyApplicationPresenter.h</itemPath>
-      <itemPath>MyApplicationView.h</itemPath>
       <itemPath>MyCanvasPresenter.h</itemPath>
       <itemPath>MyCanvasView.h</itemPath>
       <itemPath>utils.h</itemPath>
@@ -24,6 +24,12 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>BondComputationResultForm.cpp</itemPath>
+      <itemPath>BondComputationResultForm.h</itemPath>
+      <itemPath>BondComputationResultForm.ui</itemPath>
+      <itemPath>BondForm.cpp</itemPath>
+      <itemPath>BondForm.h</itemPath>
+      <itemPath>BondForm.ui</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -34,10 +40,10 @@
       <logicalFolder name="f2" displayName="services" projectFiles="true">
         <itemPath>services/BondPricerService.cpp</itemPath>
       </logicalFolder>
+      <itemPath>BondView.cpp</itemPath>
       <itemPath>CanvasWidget.cpp</itemPath>
       <itemPath>MyApplication.cpp</itemPath>
       <itemPath>MyApplicationPresenter.cpp</itemPath>
-      <itemPath>MyApplicationView.cpp</itemPath>
       <itemPath>MyCanvasPresenter.cpp</itemPath>
       <itemPath>MyCanvasView.cpp</itemPath>
       <itemPath>UnCopyable.h</itemPath>

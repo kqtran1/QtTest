@@ -7,10 +7,10 @@
 
 #include <QtCore/QObject>
 
-MyApplicationPresenter::MyApplicationPresenter(MyApplicationView & view,
+MyApplicationPresenter::MyApplicationPresenter(BondView & view,
         Poco::NotificationCenter & notificationCenter,
         BondPricerService & bondPricerService) :
-Presenter<MyApplicationView>(view, notificationCenter),
+Presenter<BondView>(view, notificationCenter),
 notificationCenter(notificationCenter),
 bondPricerService(bondPricerService) {
     Logger::logConstructor("MyApplicationPresenter");
@@ -74,10 +74,8 @@ void MyApplicationPresenter::logNothing() {
     bondData_5.couponRate = 0.04500;
     bondData_5.marketQuote = 102.140625;
     data.bondDatas.push_back(bondData_5);
+    
+    bondPricerService.run(data);
 
-    //boost::shared_future<BondPricingResult> future = serviceExecutor.submit_job(boost::bind(&BondPricerService::run, boost::ref(bondPricerService), data));
-
-    QString couponRateStr = myView->getCouponRateInput()->text();
-
-    notificationCenter.postNotification(new RunBondComputationNotification(couponRateStr.toStdString()));
+    notificationCenter.postNotification(new AddBondNotification(bondData_5));
 }

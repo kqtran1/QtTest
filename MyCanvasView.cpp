@@ -3,11 +3,9 @@
 #include "MyApplication.h"
 
 MyCanvasView::MyCanvasView() : 
-        panel(new QDockWidget(QWidget::tr("MyCanvasView"))),
         canvas(new CanvasWidget()), 
         text("Default") {
     Logger::logConstructor("MyCanvasView");
-    panel->setWidget(canvas);
 }
 
 MyCanvasView::~MyCanvasView() {
@@ -17,10 +15,6 @@ MyCanvasView::~MyCanvasView() {
 
 QWidget* MyCanvasView::container() const {
     return canvas;
-}
-
-QDockWidget* MyCanvasView::dockContainer() const {
-    return panel;
 }
 
 void MyCanvasView::setText(const std::string& text) {

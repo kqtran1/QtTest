@@ -2,7 +2,7 @@
 #define	MYAPPLICATIONPRESENTER_H
 
 #include "mvp/Presenter.h"
-#include "MyApplicationView.h"
+#include "BondView.h"
 #include "services/BondPricerService.h"
 #include "utils.h"
 
@@ -14,10 +14,10 @@ class BaseNotification: public Poco::Notification
 {
 };
 
-class MyApplicationPresenter : public Presenter<MyApplicationView> {
+class MyApplicationPresenter : public Presenter<BondView> {
     Q_OBJECT
 public:
-    MyApplicationPresenter(MyApplicationView & view, 
+    MyApplicationPresenter(BondView & view, 
             Poco::NotificationCenter & notificationCenter,
             BondPricerService & bondPricerService);
     

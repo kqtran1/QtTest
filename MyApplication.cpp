@@ -1,10 +1,12 @@
 #include "MyApplication.h"
-#include "MyApplicationView.h"
+#include "BondView.h"
 #include "MyApplicationPresenter.h"
 #include "MyCanvasView.h"
 #include "MyCanvasPresenter.h"
 #include "utils.h"
 #include "services/BondPricerService.h"
+
+#include "BondForm.h"
 
 #include <QtGui/QApplication>
 #include <QtGui/QLabel>
@@ -36,18 +38,24 @@ int MyApplication::run(int argc, char *argv[]) {
     
     BondPricerService bondPricerService;
 
-    MyApplicationView view;
+    BondView view;
     MyApplicationPresenter presenter(view, notificationCenter, bondPricerService);
-    mainWindow.addDockWidget(Qt::LeftDockWidgetArea, view.dockContainer());
+    QDockWidget * bondDataDockWidget = new QDockWidget("Bond Data");
+    bondDataDockWidget->setWidget(view.container());
+    mainWindow.addDockWidget(Qt::LeftDockWidgetArea, bondDataDockWidget);
 
     MyCanvasView canvasView;
     MyCanvasPresenter canvasPresenter(canvasView, notificationCenter);
-    mainWindow.addDockWidget(Qt::RightDockWidgetArea, canvasView.dockContainer());
+    QDockWidget * canvasDockWidget = new QDockWidget("My Canvas View");
+    canvasDockWidget->setWidget(canvasView.container());
+    mainWindow.addDockWidget(Qt::RightDockWidgetArea, canvasDockWidget);
 
 
     MyCanvasView canvasView2;
     MyCanvasPresenter canvasPresenter2(canvasView2, notificationCenter);
-    mainWindow.setCentralWidget(canvasView2.dockContainer());
+    QDockWidget * canvasDockWidget2 = new QDockWidget("My Canvas View");
+    canvasDockWidget2->setWidget(canvasView2.container());
+    mainWindow.setCentralWidget(canvasDockWidget2);
 
     mainWindow.show();
 

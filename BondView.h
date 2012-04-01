@@ -2,29 +2,26 @@
 #define	MYAPPLICATIONVIEW_H
 
 #include "View.h"
+#include "BondForm.h"
 
 #include <QtGui/QWidget>
 #include <QtGui/QGridLayout>
 #include <QtGui/QLineEdit>
 #include <QtGui/QLabel>
 #include <QtGui/QMainWindow>
-#include <QtGui/QDockWidget>
 
-class MyApplicationView : public View {
-    
+class BondView : public View {
 public:
-    MyApplicationView();
-    virtual ~MyApplicationView();
-    
+    BondView();
+    virtual ~BondView();
+
     virtual QWidget* container() const;
-    QDockWidget* dockContainer() const;
     QLineEdit* getCouponRateInput() const;
-    
-    
-    
+
+
+
 private:
-    QDockWidget *panel;
-    QLineEdit *couponRateInput;
+    BondForm * bondForm;
 };
 
 #endif

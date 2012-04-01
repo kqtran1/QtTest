@@ -14,7 +14,7 @@ public:
     MyCanvasPresenter(MyCanvasView &view, Poco::NotificationCenter & notificationCenter);
     virtual ~MyCanvasPresenter();
     
-    virtual void handle(const Poco::AutoPtr<RunBondComputationNotification> & notification);
+    virtual void handle(const Poco::AutoPtr<AddBondNotification> & notification);
     
 private:
 

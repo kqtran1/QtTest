@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'MyApplicationPresenter.h'
 **
-** Created: Tue Mar 27 23:37:58 2012
+** Created: Sun Apr 1 13:32:21 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -58,7 +58,7 @@ const QMetaObjectExtraData MyApplicationPresenter::staticMetaObjectExtraData = {
 };
 
 const QMetaObject MyApplicationPresenter::staticMetaObject = {
-    { &Presenter<MyApplicationView>::staticMetaObject, qt_meta_stringdata_MyApplicationPresenter,
+    { &Presenter<BondView>::staticMetaObject, qt_meta_stringdata_MyApplicationPresenter,
       qt_meta_data_MyApplicationPresenter, &staticMetaObjectExtraData }
 };
 
@@ -76,12 +76,12 @@ void *MyApplicationPresenter::qt_metacast(const char *_clname)
     if (!_clname) return 0;
     if (!strcmp(_clname, qt_meta_stringdata_MyApplicationPresenter))
         return static_cast<void*>(const_cast< MyApplicationPresenter*>(this));
-    return Presenter<MyApplicationView>::qt_metacast(_clname);
+    return Presenter<BondView>::qt_metacast(_clname);
 }
 
 int MyApplicationPresenter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = Presenter<MyApplicationView>::qt_metacall(_c, _id, _a);
+    _id = Presenter<BondView>::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

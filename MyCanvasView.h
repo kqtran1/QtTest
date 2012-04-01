@@ -6,7 +6,6 @@
 #include "CanvasWidget.h"
 
 #include <QtGui/QWidget>
-#include <QtGui/QDockWidget>
 #include <QtGui/QMainWindow>
 #include <string>
 
@@ -16,12 +15,10 @@ public:
     virtual ~MyCanvasView();
     
     virtual QWidget* container() const;
-    QDockWidget* dockContainer() const;
     
     void setText(const std::string &text);
     
 private:
-    QDockWidget *panel;
     CanvasWidget *canvas;
     std::string text;
 };
