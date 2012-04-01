@@ -1,9 +1,11 @@
 #ifndef VIEW_H
 #define	VIEW_H
 
+#include "UnCopyable.h"
+
 #include <QtGui/QWidget>
 
-class View {
+class View : public UnCopyable {
 public:
     View();
     virtual ~View();

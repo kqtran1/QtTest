@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'BondForm.ui'
 **
-** Created: Sun Apr 1 13:08:13 2012
+** Created: Sun Apr 1 14:13:44 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

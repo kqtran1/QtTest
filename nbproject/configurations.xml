@@ -14,7 +14,6 @@
       </logicalFolder>
       <itemPath>BondView.h</itemPath>
       <itemPath>CanvasWidget.h</itemPath>
-      <itemPath>ChangeTextEvent.h</itemPath>
       <itemPath>MyApplication.h</itemPath>
       <itemPath>MyApplicationPresenter.h</itemPath>
       <itemPath>MyCanvasPresenter.h</itemPath>

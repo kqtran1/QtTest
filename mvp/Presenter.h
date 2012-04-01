@@ -2,6 +2,7 @@
 #define	PRESENTER_H
 
 #include "View.h"
+#include "UnCopyable.h"
 #include "utils.h"
 
 #include <QtCore/QObject>
@@ -9,7 +10,7 @@
 #include <Poco/NotificationCenter.h>
 
 template <class T>
-class Presenter: public QObject {    
+class Presenter: public QObject, public UnCopyable {    
 public:
     Presenter(T &view, Poco::NotificationCenter & notificationCenter);
     virtual ~Presenter();

@@ -10,10 +10,6 @@
 
 #include <Poco/NotificationCenter.h>
 
-class BaseNotification: public Poco::Notification 
-{
-};
-
 class MyApplicationPresenter : public Presenter<BondView> {
     Q_OBJECT
 public:

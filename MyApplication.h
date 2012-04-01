@@ -1,11 +1,12 @@
 #ifndef MYAPPLICATION_H
 #define	MYAPPLICATION_H
 
-#include <QtCore/QObject>
-
+#include "UnCopyAble.h"
 #include "utils.h"
 
-class MyApplication {
+#include <QtCore/QObject>
+
+class MyApplication : public UnCopyable {
   
 public:
     MyApplication();
