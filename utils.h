@@ -1,9 +1,9 @@
 #ifndef UTILS_H
 #define	UTILS_H
 
+#include <boost/shared_ptr.hpp> 
 #include <iostream>
 #include <string>
-#include <boost/shared_ptr.hpp> 
 
 class Logger {
 public:

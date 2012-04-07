@@ -1,9 +1,9 @@
 #ifndef MYCANVASPRESENTER_H
 #define	MYCANVASPRESENTER_H
 
+#include "Event.h"
 #include "MyCanvasView.h"
 #include "mvp/Presenter.h"
-#include "mvp/Event.h"
 #include "utils.h"
 
 #include <Poco/AutoPtr.h>

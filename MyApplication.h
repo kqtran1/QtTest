@@ -1,12 +1,12 @@
 #ifndef MYAPPLICATION_H
 #define	MYAPPLICATION_H
 
-#include "UnCopyAble.h"
 #include "utils.h"
 
 #include <QtCore/QObject>
+#include <boost/utility.hpp>
 
-class MyApplication : public UnCopyable {
+class MyApplication : public boost::noncopyable {
   
 public:
     MyApplication();

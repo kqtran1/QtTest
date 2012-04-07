@@ -2,15 +2,15 @@
 #define	PRESENTER_H
 
 #include "View.h"
-#include "UnCopyable.h"
 #include "utils.h"
 
 #include <QtCore/QObject>
 
 #include <Poco/NotificationCenter.h>
+#include <boost/utility.hpp>
 
 template <class T>
-class Presenter: public QObject, public UnCopyable {    
+class Presenter: public QObject, public boost::noncopyable {    
 public:
     Presenter(T &view, Poco::NotificationCenter & notificationCenter);
     virtual ~Presenter();

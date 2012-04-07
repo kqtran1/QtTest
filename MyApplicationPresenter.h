@@ -1,10 +1,11 @@
 #ifndef MYAPPLICATIONPRESENTER_H
 #define	MYAPPLICATIONPRESENTER_H
 
-#include "mvp/Presenter.h"
 #include "BondView.h"
 #include "services/BondPricerService.h"
 #include "utils.h"
+
+#include "mvp/Presenter.h"
 
 #include <QtGui/QLabel>
 

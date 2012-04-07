@@ -1,12 +1,13 @@
 #ifndef MYCANVASVIEW_H
 #define	MYCANVASVIEW_H
 
-#include "View.h"
-#include "utils.h"
 #include "CanvasWidget.h"
+#include "utils.h"
 
+#include "mvp/View.h"
 #include <QtGui/QWidget>
 #include <QtGui/QMainWindow>
+
 #include <string>
 
 class MyCanvasView : public View {

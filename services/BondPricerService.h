@@ -1,11 +1,10 @@
 #ifndef BONDPRICERSERVICE_H
 #define	BONDPRICERSERVICE_H
 
-#include "UnCopyable.h"
-
 #include <ql/quantlib.hpp>
 
 #include <boost/timer.hpp>
+#include <boost/utility.hpp>
 #include <vector>
 
 struct BondData {
@@ -41,7 +40,7 @@ struct BondPricingResult {
     std::string message;
 };
 
-class BondPricerService : public UnCopyable {
+class BondPricerService : public boost::noncopyable {
 public:
     BondPricerService();
     virtual ~BondPricerService();

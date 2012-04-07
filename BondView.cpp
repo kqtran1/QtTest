@@ -1,6 +1,6 @@
 #include "BondView.h"
-#include "utils.h"
 #include "MyApplication.h"
+#include "utils.h"
 
 #include <QtGui/QLabel>
 

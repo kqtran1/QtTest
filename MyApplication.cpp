@@ -1,21 +1,21 @@
 #include "MyApplication.h"
-#include "BondView.h"
-#include "MyApplicationPresenter.h"
-#include "MyCanvasView.h"
-#include "MyCanvasPresenter.h"
-#include "utils.h"
-#include "services/BondPricerService.h"
 
 #include "BondForm.h"
+#include "BondView.h"
+#include "MyApplicationPresenter.h"
+#include "MyCanvasPresenter.h"
+#include "MyCanvasView.h"
+#include "services/BondPricerService.h"
+#include "utils.h"
 
 #include <QtGui/QApplication>
+#include <QtGui/QGridLayout>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
-#include <QtGui/QGridLayout>
 
+#include <QtGui/QDockWidget>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenuBar>
-#include <QtGui/QDockWidget>
 #include <QtGui/QToolBar>
 
 #include <Poco/NotificationCenter.h>

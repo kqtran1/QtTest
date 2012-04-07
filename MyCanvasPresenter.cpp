@@ -1,5 +1,6 @@
 #include "MyCanvasPresenter.h"
-#include "mvp/Event.h"
+
+#include "Event.h"
 
 #include <Poco/NObserver.h>
 

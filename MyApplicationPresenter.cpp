@@ -1,5 +1,5 @@
 #include "MyApplicationPresenter.h"
-#include "mvp/Event.h"
+#include "Event.h"
 #include "utils.h"
 
 #include <boost/lexical_cast.hpp>

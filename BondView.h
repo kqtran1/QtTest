@@ -1,8 +1,9 @@
 #ifndef MYAPPLICATIONVIEW_H
 #define	MYAPPLICATIONVIEW_H
 
-#include "View.h"
 #include "BondForm.h"
+
+#include "mvp/View.h"
 
 #include <QtGui/QWidget>
 #include <QtGui/QGridLayout>

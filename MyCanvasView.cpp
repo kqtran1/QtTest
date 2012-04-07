@@ -1,6 +1,6 @@
-#include "MyCanvasView.h"
 #include "CanvasWidget.h"
 #include "MyApplication.h"
+#include "MyCanvasView.h"
 
 MyCanvasView::MyCanvasView() : 
         canvas(new CanvasWidget()), 

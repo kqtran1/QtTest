@@ -5,9 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="mvp" projectFiles="true">
-        <itemPath>mvp/Event.h</itemPath>
+        <itemPath>Event.h</itemPath>
         <itemPath>mvp/Presenter.h</itemPath>
-        <itemPath>View.h</itemPath>
+        <itemPath>mvp/View.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="services" projectFiles="true">
         <itemPath>services/BondPricerService.h</itemPath>
