@@ -17,6 +17,18 @@ QWidget* BondView::container() const {
     return bondForm;
 }
 
-QLineEdit* BondView::getCouponRateInput() const {
-    return bondForm->widget.CouponRateInput;
+QLineEdit* BondView::couponRateInput() const {
+    return bondForm->widget.couponRateInput;
+}
+
+QLineEdit* BondView::marketQuoteInput() const {
+    return bondForm->widget.marketQuoteInput;
+}
+
+QDateEdit* BondView::issueDateEdit() const {
+    return bondForm->widget.issueDateEdit;
+}
+
+QDateEdit* BondView::maturityDateEdit() const {
+    return bondForm->widget.maturityEdit;
 }

@@ -1,15 +1,15 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'BondForm.h'
+** Meta object code from reading C++ file 'BondTableModel.h'
 **
-** Created: Mon Apr 9 22:18:07 2012
+** Created: Mon Apr 9 22:17:50 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "BondForm.h"
+#include "BondTableModel.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'BondForm.h' doesn't include <QObject>."
+#error "The header file 'BondTableModel.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
 #error "This file was generated using the moc from 4.8.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_BondForm[] = {
+static const uint qt_meta_data_BondTableModel[] = {
 
  // content:
        6,       // revision
@@ -33,11 +33,11 @@ static const uint qt_meta_data_BondForm[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_BondForm[] = {
-    "BondForm\0"
+static const char qt_meta_stringdata_BondTableModel[] = {
+    "BondTableModel\0"
 };
 
-void BondForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void BondTableModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -45,35 +45,35 @@ void BondForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
     Q_UNUSED(_a);
 }
 
-const QMetaObjectExtraData BondForm::staticMetaObjectExtraData = {
+const QMetaObjectExtraData BondTableModel::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject BondForm::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_BondForm,
-      qt_meta_data_BondForm, &staticMetaObjectExtraData }
+const QMetaObject BondTableModel::staticMetaObject = {
+    { &QAbstractTableModel::staticMetaObject, qt_meta_stringdata_BondTableModel,
+      qt_meta_data_BondTableModel, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &BondForm::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &BondTableModel::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *BondForm::metaObject() const
+const QMetaObject *BondTableModel::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *BondForm::qt_metacast(const char *_clname)
+void *BondTableModel::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_BondForm))
-        return static_cast<void*>(const_cast< BondForm*>(this));
-    return QWidget::qt_metacast(_clname);
+    if (!strcmp(_clname, qt_meta_stringdata_BondTableModel))
+        return static_cast<void*>(const_cast< BondTableModel*>(this));
+    return QAbstractTableModel::qt_metacast(_clname);
 }
 
-int BondForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int BondTableModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QAbstractTableModel::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;

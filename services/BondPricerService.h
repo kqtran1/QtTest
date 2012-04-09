@@ -18,7 +18,6 @@ struct BondData {
 };
 
 struct BondDataList {
-    ~BondDataList() { Logger::logDestructor("BondDataList");}
     QuantLib::Date settlementDate;
     QuantLib::Integer fixingDays;
     QuantLib::Natural settlementDays;

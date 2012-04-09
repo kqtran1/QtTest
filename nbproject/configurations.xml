@@ -40,6 +40,8 @@
       </logicalFolder>
       <itemPath>BondCalculationTask.cpp</itemPath>
       <itemPath>BondCalculationTask.h</itemPath>
+      <itemPath>BondTableModel.cpp</itemPath>
+      <itemPath>BondTableModel.h</itemPath>
       <itemPath>BondView.cpp</itemPath>
       <itemPath>CanvasWidget.cpp</itemPath>
       <itemPath>MyApplication.cpp</itemPath>

@@ -2,21 +2,24 @@
 #include "MyApplication.h"
 #include "MyCanvasView.h"
 
-MyCanvasView::MyCanvasView() : 
-        canvas(new CanvasWidget()), 
-        text("Default") {
+MyCanvasView::MyCanvasView(BondTableModel * model) :
+tableView(new QTableView()),
+model(model),
+text("Default") {
     Logger::logConstructor("MyCanvasView");
+    tableView->setModel(model);
+    tableView->setMinimumSize(400, 400);
 }
 
 MyCanvasView::~MyCanvasView() {
     Logger::logDestructor("MyCanvasView");
-    //delete canvas;
 }
 
 QWidget* MyCanvasView::container() const {
-    return canvas;
+    return tableView;
 }
 
-void MyCanvasView::setText(const std::string& text) {
-    this->canvas->setText(text);
+void MyCanvasView::addBondData(const BondData & bondData) {
+    std::cout << "add bond data" << std::endl;
+    this->model->addBondData(bondData);
 }

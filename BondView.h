@@ -19,11 +19,12 @@ public:
     virtual ~BondView();
 
     virtual QWidget* container() const;
-    QLineEdit* getCouponRateInput() const;
+    QLineEdit* couponRateInput() const;
+    QLineEdit* marketQuoteInput() const;
+    QDateEdit* issueDateEdit() const;
+    QDateEdit* maturityDateEdit() const;
 
-
-
-private:
+public:
     BondForm * bondForm;
 };
 

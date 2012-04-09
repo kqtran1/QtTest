@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'BondForm.ui'
 **
-** Created: Sun Apr 8 23:14:54 2012
+** Created: Mon Apr 9 22:16:52 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -30,7 +30,7 @@ public:
     QWidget *formLayoutWidget;
     QFormLayout *formLayout;
     QLabel *couponRateLabel;
-    QLineEdit *CouponRateInput;
+    QLineEdit *couponRateInput;
     QLabel *marketQuoteLabel;
     QLineEdit *marketQuoteInput;
     QLabel *maturityLabel;
@@ -43,12 +43,13 @@ public:
     {
         if (BondForm->objectName().isEmpty())
             BondForm->setObjectName(QString::fromUtf8("BondForm"));
-        BondForm->resize(279, 166);
+        BondForm->resize(300, 250);
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(BondForm->sizePolicy().hasHeightForWidth());
         BondForm->setSizePolicy(sizePolicy);
+        BondForm->setMinimumSize(QSize(300, 250));
         formLayoutWidget = new QWidget(BondForm);
         formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
         formLayoutWidget->setGeometry(QRect(-1, -1, 281, 178));
@@ -62,10 +63,10 @@ public:
 
         formLayout->setWidget(2, QFormLayout::LabelRole, couponRateLabel);
 
-        CouponRateInput = new QLineEdit(formLayoutWidget);
-        CouponRateInput->setObjectName(QString::fromUtf8("CouponRateInput"));
+        couponRateInput = new QLineEdit(formLayoutWidget);
+        couponRateInput->setObjectName(QString::fromUtf8("couponRateInput"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, CouponRateInput);
+        formLayout->setWidget(2, QFormLayout::FieldRole, couponRateInput);
 
         marketQuoteLabel = new QLabel(formLayoutWidget);
         marketQuoteLabel->setObjectName(QString::fromUtf8("marketQuoteLabel"));
@@ -112,7 +113,7 @@ public:
     {
         BondForm->setWindowTitle(QApplication::translate("BondForm", "BondForm", 0, QApplication::UnicodeUTF8));
         couponRateLabel->setText(QApplication::translate("BondForm", "Coupon Rate", 0, QApplication::UnicodeUTF8));
-        CouponRateInput->setInputMask(QApplication::translate("BondForm", "0.00000; ", 0, QApplication::UnicodeUTF8));
+        couponRateInput->setInputMask(QApplication::translate("BondForm", "0.00000; ", 0, QApplication::UnicodeUTF8));
         marketQuoteLabel->setText(QApplication::translate("BondForm", "Market Quote", 0, QApplication::UnicodeUTF8));
         marketQuoteInput->setInputMask(QApplication::translate("BondForm", "000.0000; ", 0, QApplication::UnicodeUTF8));
         maturityLabel->setText(QApplication::translate("BondForm", "Maturity", 0, QApplication::UnicodeUTF8));

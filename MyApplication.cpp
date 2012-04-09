@@ -8,6 +8,7 @@
 #include "services/BondPricerService.h"
 #include "utils.h"
 #include "BondCalculationTask.h"
+#include "BondTableModel.h"
 
 #include <QtGui/QApplication>
 #include <QtGui/QGridLayout>
@@ -48,13 +49,15 @@ int MyApplication::run(int argc, char *argv[]) {
     bondDataDockWidget->setWidget(view->container());
     mainWindow.addDockWidget(Qt::LeftDockWidgetArea, bondDataDockWidget);
 
-    MyCanvasViewPtr canvasView(new MyCanvasView());
+    BondTableModel model1(0);
+    MyCanvasViewPtr canvasView(new MyCanvasView(&model1));
     MyCanvasPresenter canvasPresenter(canvasView, notificationCenter);
     QDockWidget * canvasDockWidget = new QDockWidget("My Canvas View");
     canvasDockWidget->setWidget(canvasView->container());
     mainWindow.addDockWidget(Qt::RightDockWidgetArea, canvasDockWidget);
 
-    MyCanvasViewPtr canvasView2(new MyCanvasView());
+    BondTableModel model2(0);
+    MyCanvasViewPtr canvasView2(new MyCanvasView(&model2));
     MyCanvasPresenter canvasPresenter2(canvasView2, notificationCenter);
     QDockWidget * canvasDockWidget2 = new QDockWidget("My Canvas View");
     canvasDockWidget2->setWidget(canvasView2->container());

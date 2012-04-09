@@ -1,10 +1,13 @@
 #ifndef MYCANVASVIEW_H
 #define	MYCANVASVIEW_H
 
+#include "BondTableModel.h"
+#include "services/BondPricerService.h"
 #include "CanvasWidget.h"
 #include "utils.h"
 
 #include "mvp/View.h"
+#include <QtGui/QTableView>
 #include <QtGui/QWidget>
 #include <QtGui/QMainWindow>
 
@@ -13,16 +16,17 @@
 
 class MyCanvasView : public View {
 public:
-    MyCanvasView();
+    MyCanvasView(BondTableModel * model);
     virtual ~MyCanvasView();
     
     virtual QWidget* container() const;
     
-    void setText(const std::string &text);
+    void addBondData(const BondData & bondData);
     
 private:
-    CanvasWidget *canvas;
     std::string text;
+    BondTableModel * model;
+    QTableView * tableView;
 };
 
 typedef boost::shared_ptr<MyCanvasView> MyCanvasViewPtr;

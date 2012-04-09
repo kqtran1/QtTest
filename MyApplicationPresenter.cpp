@@ -15,7 +15,7 @@ notificationCenter(notificationCenter),
 bondPricerService(bondPricerService) {
     Logger::logConstructor("MyApplicationPresenter");
 
-    QObject::connect(view->getCouponRateInput(), SIGNAL(returnPressed()), this, SLOT(logNothing()));
+    QObject::connect(view->couponRateInput(), SIGNAL(returnPressed()), this, SLOT(logNothing()));
 
 }
 
@@ -68,14 +68,23 @@ void MyApplicationPresenter::logNothing() {
     bondData_4.marketQuote = 101.6875;
     data.bondDatas.push_back(bondData_4);*/
 
-    BondData bondData_5;
-    bondData_5.issueDate = QuantLib::Date(15, QuantLib::May, 1987);
-    bondData_5.maturity = QuantLib::Date(15, QuantLib::May, 2038);
-    bondData_5.couponRate = 0.04500;
-    bondData_5.marketQuote = 102.140625;
-    data.bondDatas.push_back(bondData_5);
+    BondData bondData;
     
-    bondPricerService.run(data);
+    QDate issueQDate = presenterView->issueDateEdit()->date();
+    bondData.issueDate = QuantLib::Date(issueQDate.day(), (QuantLib::Month) issueQDate.month(), issueQDate.year()); 
+ 
+    QDate maturityQDate = presenterView->maturityDateEdit()->date();
+    bondData.maturity = QuantLib::Date(maturityQDate.day(), (QuantLib::Month) maturityQDate.month(), maturityQDate.year()); 
+    //bondData.issueDate = QuantLib::Date(15, QuantLib::May, 1987);
+    //bondData.maturity = QuantLib::Date(15, QuantLib::May, 2038);
+    //bondData_5.couponRate = 0.04500;
+    //bondData_5.marketQuote = 102.140625;
+    
+    bondData.couponRate = presenterView->couponRateInput()->text().toDouble();
+    bondData.marketQuote = presenterView->marketQuoteInput()->text().toDouble();
+    data.bondDatas.push_back(bondData);
+    
+    //bondPricerService.run(data);
 
-    notificationCenter.postNotification(new AddBondNotification(bondData_5));
+    notificationCenter.postNotification(new AddBondNotification(bondData));
 }

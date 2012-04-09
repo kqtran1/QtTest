@@ -15,5 +15,5 @@ MyCanvasPresenter::~MyCanvasPresenter() {
 }
 
 void MyCanvasPresenter::handle(const Poco::AutoPtr<AddBondNotification> & notification) {
-    this->presenterView->setText("TOTO");
+    this->presenterView->addBondData(notification->bondData());
 }

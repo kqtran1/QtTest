@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>279</width>
-    <height>166</height>
+    <width>300</width>
+    <height>250</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -15,6 +15,12 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>250</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>BondForm</string>
@@ -43,7 +49,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="CouponRateInput">
+     <widget class="QLineEdit" name="couponRateInput">
       <property name="inputMask">
        <string>0.00000; </string>
       </property>
