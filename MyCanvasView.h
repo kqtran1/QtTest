@@ -8,6 +8,7 @@
 #include <QtGui/QWidget>
 #include <QtGui/QMainWindow>
 
+#include <boost/shared_ptr.hpp>
 #include <string>
 
 class MyCanvasView : public View {
@@ -23,5 +24,7 @@ private:
     CanvasWidget *canvas;
     std::string text;
 };
+
+typedef boost::shared_ptr<MyCanvasView> MyCanvasViewPtr;
 
 #endif

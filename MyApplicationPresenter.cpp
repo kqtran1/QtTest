@@ -7,7 +7,7 @@
 
 #include <QtCore/QObject>
 
-MyApplicationPresenter::MyApplicationPresenter(BondView & view,
+MyApplicationPresenter::MyApplicationPresenter(boost::shared_ptr<BondView> view,
         Poco::NotificationCenter & notificationCenter,
         BondPricerService & bondPricerService) :
 Presenter<BondView>(view, notificationCenter),
@@ -15,7 +15,7 @@ notificationCenter(notificationCenter),
 bondPricerService(bondPricerService) {
     Logger::logConstructor("MyApplicationPresenter");
 
-    QObject::connect(view.getCouponRateInput(), SIGNAL(returnPressed()), this, SLOT(logNothing()));
+    QObject::connect(view->getCouponRateInput(), SIGNAL(returnPressed()), this, SLOT(logNothing()));
 
 }
 

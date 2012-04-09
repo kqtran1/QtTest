@@ -14,7 +14,7 @@
 class MyApplicationPresenter : public Presenter<BondView> {
     Q_OBJECT
 public:
-    MyApplicationPresenter(BondView & view, 
+    MyApplicationPresenter(BondViewPtr view, 
             Poco::NotificationCenter & notificationCenter,
             BondPricerService & bondPricerService);
     

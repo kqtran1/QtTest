@@ -11,6 +11,8 @@
 #include <QtGui/QLabel>
 #include <QtGui/QMainWindow>
 
+#include <boost/shared_ptr.hpp>
+
 class BondView : public View {
 public:
     BondView();
@@ -24,6 +26,8 @@ public:
 private:
     BondForm * bondForm;
 };
+
+typedef boost::shared_ptr<BondView> BondViewPtr;
 
 #endif
 

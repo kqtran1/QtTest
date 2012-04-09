@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'BondComputationResultForm.ui'
 **
-** Created: Fri Apr 6 23:45:35 2012
+** Created: Sun Apr 8 23:14:54 2012
 **      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

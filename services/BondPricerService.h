@@ -1,11 +1,14 @@
 #ifndef BONDPRICERSERVICE_H
 #define	BONDPRICERSERVICE_H
 
+#include "utils.h"
+
 #include <ql/quantlib.hpp>
 
 #include <boost/timer.hpp>
 #include <boost/utility.hpp>
 #include <vector>
+#include <Poco/TaskManager.h>
 
 struct BondData {
     QuantLib::Date issueDate;
@@ -15,6 +18,7 @@ struct BondData {
 };
 
 struct BondDataList {
+    ~BondDataList() { Logger::logDestructor("BondDataList");}
     QuantLib::Date settlementDate;
     QuantLib::Integer fixingDays;
     QuantLib::Natural settlementDays;
@@ -45,10 +49,10 @@ public:
     BondPricerService();
     virtual ~BondPricerService();
 
-    BondPricingResult run(const BondDataList data);
+    BondPricingResult run(const BondDataList & data);
 
 private:
-
+    Poco::TaskManager taskManager;
 };
 
 

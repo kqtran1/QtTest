@@ -7,23 +7,24 @@
 #include <QtCore/QObject>
 
 #include <Poco/NotificationCenter.h>
+#include <boost/shared_ptr.hpp>
 #include <boost/utility.hpp>
 
 template <class T>
 class Presenter: public QObject, public boost::noncopyable {    
 public:
-    Presenter(T &view, Poco::NotificationCenter & notificationCenter);
+    Presenter(boost::shared_ptr<T> view, Poco::NotificationCenter & notificationCenter);
     virtual ~Presenter();
     
-    const T & view() const;
+    const boost::shared_ptr<T> view() const;
 
 protected:
-    T *myView;
+    boost::shared_ptr<T> presenterView;
     Poco::NotificationCenter & notificationCenter;
 };
 
 template <class T>
-Presenter<T>::Presenter(T &view, Poco::NotificationCenter & notificationCenter) : myView(&view), notificationCenter(notificationCenter) {
+Presenter<T>::Presenter(boost::shared_ptr<T> view, Poco::NotificationCenter & notificationCenter) : presenterView(view), notificationCenter(notificationCenter) {
     Logger::logConstructor("Presenter");
 }
 
@@ -33,8 +34,8 @@ Presenter<T>::~Presenter() {
 }
 
 template <class T>
-const T& Presenter<T>::view() const {
-    return *myView;
+const boost::shared_ptr<T> Presenter<T>::view() const {
+    return presenterView;
 }
 
 #endif

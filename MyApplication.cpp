@@ -7,6 +7,7 @@
 #include "MyCanvasView.h"
 #include "services/BondPricerService.h"
 #include "utils.h"
+#include "BondCalculationTask.h"
 
 #include <QtGui/QApplication>
 #include <QtGui/QGridLayout>
@@ -18,7 +19,10 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QToolBar>
 
+#include <boost/shared_ptr.hpp>
 #include <Poco/NotificationCenter.h>
+#include <Poco/Task.h>
+#include <Poco/TaskManager.h>
 
 MyApplication::MyApplication() {
     Logger::logConstructor("MyApplication");
@@ -35,26 +39,25 @@ int MyApplication::run(int argc, char *argv[]) {
     Poco::NotificationCenter notificationCenter;
 
     QMainWindow mainWindow;
-    
+
     BondPricerService bondPricerService;
 
-    BondView view;
+    BondViewPtr view(new BondView());
     MyApplicationPresenter presenter(view, notificationCenter, bondPricerService);
     QDockWidget * bondDataDockWidget = new QDockWidget("Bond Data");
-    bondDataDockWidget->setWidget(view.container());
+    bondDataDockWidget->setWidget(view->container());
     mainWindow.addDockWidget(Qt::LeftDockWidgetArea, bondDataDockWidget);
 
-    MyCanvasView canvasView;
+    MyCanvasViewPtr canvasView(new MyCanvasView());
     MyCanvasPresenter canvasPresenter(canvasView, notificationCenter);
     QDockWidget * canvasDockWidget = new QDockWidget("My Canvas View");
-    canvasDockWidget->setWidget(canvasView.container());
+    canvasDockWidget->setWidget(canvasView->container());
     mainWindow.addDockWidget(Qt::RightDockWidgetArea, canvasDockWidget);
 
-
-    MyCanvasView canvasView2;
+    MyCanvasViewPtr canvasView2(new MyCanvasView());
     MyCanvasPresenter canvasPresenter2(canvasView2, notificationCenter);
     QDockWidget * canvasDockWidget2 = new QDockWidget("My Canvas View");
-    canvasDockWidget2->setWidget(canvasView2.container());
+    canvasDockWidget2->setWidget(canvasView2->container());
     mainWindow.setCentralWidget(canvasDockWidget2);
 
     mainWindow.show();

@@ -11,7 +11,7 @@
 
 class MyCanvasPresenter : public Presenter<MyCanvasView> {
 public:
-    MyCanvasPresenter(MyCanvasView &view, Poco::NotificationCenter & notificationCenter);
+    MyCanvasPresenter(MyCanvasViewPtr view, Poco::NotificationCenter & notificationCenter);
     virtual ~MyCanvasPresenter();
     
     virtual void handle(const Poco::AutoPtr<AddBondNotification> & notification);

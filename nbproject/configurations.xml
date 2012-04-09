@@ -34,18 +34,18 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="mvp" projectFiles="true">
-        <itemPath>mvp/View.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="services" projectFiles="true">
         <itemPath>services/BondPricerService.cpp</itemPath>
       </logicalFolder>
+      <itemPath>BondCalculationTask.cpp</itemPath>
+      <itemPath>BondCalculationTask.h</itemPath>
       <itemPath>BondView.cpp</itemPath>
       <itemPath>CanvasWidget.cpp</itemPath>
       <itemPath>MyApplication.cpp</itemPath>
       <itemPath>MyApplicationPresenter.cpp</itemPath>
       <itemPath>MyCanvasPresenter.cpp</itemPath>
       <itemPath>MyCanvasView.cpp</itemPath>
-      <itemPath>UnCopyable.h</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
